@@ -1,10 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
 
-  <!-- <div>test</div> -->
+  <h1>Chicken Page</h1>
+
 
   <div id="app">
       <!-- <li v-for="item in response" v-bind:key="item.title">
@@ -15,8 +12,6 @@
       <!-- <ul v-for="item in response" v-bind:key="item">
         <div >{{ item.recipe.label }}</div>
       </ul> -->
-
-      
 
       <div class="grid-food" >
 
@@ -35,12 +30,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+
   },
   data() {
       return {
@@ -77,10 +72,10 @@ export default {
 
       fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=chicken`)
           .then(res => res.json())
-          .then(dat => this.response = dat.hits) // pass the data to the response variable
+          .then(data => this.response = data.hits) // pass the data to the response variable
           .then(console.log("test"))
           .then(console.log("other test"))
-          .then(dat => console.log(dat.hits)) // print to the console
+          .then(data => console.log(data)) // print to the console
       .catch(function (err) {
           console.log('ERROR CATCHED - ' + err);
       });
