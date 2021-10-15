@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/chicken">Chicken</router-link> | 
     <router-link to="/fish">Fish</router-link> | 
+    <router-link to="/recipe">Recipe</router-link> | 
     <router-link to="/about">About</router-link> |
   </div>
   <router-view/>
