@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 <template>
   <div class="app">
     <div>
@@ -11,7 +9,7 @@
     <div class="reader" v-for="page in pages">
       <div class="page" v-if="currentPage === page.number">
         <h1>{{ page.number }}</h1>
-        <img :src=page.url />
+        <img class="page" :src=page.url />
       </div>
     </div>
   </div>
@@ -35,5 +33,7 @@ export default {
 </script>
 
 <style scoped>
-
+.page {
+  width: 100%;
+}
 </style>
