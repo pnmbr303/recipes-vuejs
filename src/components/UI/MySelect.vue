@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 <template>
   <select v-model="modelValue" @change="changeOption">
     <option disabled value="">Выберите из списка</option>
